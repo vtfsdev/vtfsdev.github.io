@@ -147,18 +147,25 @@ h2 {
 }
 
 .employer .float-right,
-.employer .float-left,
-.project .float-left,
-.project .float-right {
+.employer .float-left {
   font-weight: normal;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
 }
 
-// .project .float-left2 {
-//   padding: 1px;
-// }
+.project .name-float-left,
+.project .industry-float-left {
+  float: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.project .industry-float-left {
+  font-weight: normal;
+  padding-left: 5px;
+}
 
 .role h3 {
   font-weight: bold;
