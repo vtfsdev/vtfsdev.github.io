@@ -5,19 +5,20 @@
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
        <link rel="author" href="humans.txt" />
-       <link rel="stylesheet" type="text/css" href="./dist/css/main.min.css.">
+       <link rel="stylesheet" type="text/css" href="./dist/css/main.min.css">
        <meta name="description" content="Victor Tung's Site">
        <meta name="keywords" content="full stack developer, scrum master, LAMP, MEAN">
        <link rel="apple-touch-icon" sizes="180x180" href="/android-chrome-192x192.png">
        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
        <link rel="manifest" href="/site.webmanifest">
-       <link href="./dist/css/main.min.css." type="text/css" rel="stylesheet">
+       <link href="./dist/css/main.min.css" type="text/css" rel="stylesheet">
     </head>
     <main>
       <body>
         <header>
           <span class="logo">My WebSite</span>
+          <a id="toggleMenu">Menu<a></a>
           <nav>
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -27,7 +28,7 @@
           </nav>
         </header>
 
-            <section>
+            <section class="personal">
               <h1>Microtrain Bootcamp</h1>
     
               <div>
@@ -50,38 +51,58 @@
               </ul>
             </section>
             
-            <section>
+            <section class="core-skills">
               <h3>Core Competencies</h3>
             
-              <ul>
-                <li>Full Stack Development</li>
-                <li>Strong Analytical Skills</li>
-                <li>Prioritizes Tasks</li>
-              </ul>
-              <ul>
-                <li>Hybrid Mobile Development</li>
-                <li>Savvy Problem Solver</li>
-                <li>Strong Leadership Skills</li>
-              </ul>
+                <div class="clearfix">
+                  <ul class="cs-float-left">
+                    <li>Full Stack Development</li>
+                    <li>Strong Analytical Skills</li>
+                    <li>Prioritizes Tasks</li>
+                  </ul>
+                  <ul class="cs-float-right">
+                    <li>Hybrid Mobile Development</li>
+                    <li>Savvy Problem Solver</li>
+                    <li>Strong Leadership Skills</li>
+                  </ul>
+                </div>
+            
             </section>
             
-            <section>
+            <section class="certs">
               <h2>CERTIFICATIONS / TECHNICAL PROFICIENCIES</h2>
             
-              <ul>
-                <li>Certifications: Agile Certified Scrum Master</li>
-                <li>Platforms: Linux, Windows, Mac, LAMP, MEAN, NodeJS</li>
-                <li>Database: MySQL, MongoDB</li>
-                <li>Tools: VS Code, SSH, Gulp, Git</li>
-                <li>Languages: HTML, CSS, SASS, JavaScript, ES6, PHP, Bash, SQL</li>
-              </ul>
+              <table>
+                <tr>
+                  <th>Certifications:</th>
+                  <td>Agile Certified Scrum Master</td>
+                </tr>
+                <tr>
+                  <th>Platforms:</th>
+                  <td>Linux, Windows, Mac, LAMP, MEAN, NodeJS</td>
+                </tr>
+                <tr>
+                  <th>Database:</th>
+                  <td>MySQL, MongoDB</td> 
+                </tr>
+                <tr>
+                  <th>Tools:</th>
+                  <td>VS Code, SSH, Gulp, Git</td>
+                </tr>
+                <tr>
+                  <th>Languages:</th>
+                  <td>HTML, CSS, SASS, JavaScript, ES6, PHP, Bash, SQL</td>
+                </tr>
+              </table>
             </section>
             
-            <section>
+            <section class="work">
               <h2>PROFESSIONAL EXPERIENCE</h2>
             
-              <h3>Bob’s Custom Websites – Chicago, IL
-                2015 – Present</h3>
+              <div class="clearfix">
+                <h3 class="float-left">Bob’s Custom Websites – Chicago, IL</h3>
+                <h3 class="float-right">2015 – Present</h3>
+              </div>
             
               <p>Bob’s Custom Websites builds custom web applications for clients across a large number of industries.</p>
             
@@ -94,7 +115,7 @@
                 <li>Ensured corporate and department objectives were accomplished in accordance with outlined
                   objectives and mission statements.</li>
               </ul>
-              Key Contributions:
+              <h4>Key Contributions:</h4>
               <ul>
                 <li>Developed and implemented procedures and guidelines, optimizing productivity and efficiency;
                   generating significant cost savings.</li>
@@ -103,19 +124,43 @@
               </ul>
             </section>
             
-            <section>
+            <section class="education">
               <h2>EDUCATION</h2>
             
-              DeVry University – Chicago, IL
-                2011 – 2015
+              <div class="school clearfix">
+                <h3 class="float-left">DeVry University – Chicago, IL</h3>
+                <h3 class="float-right">2011 – 2015</h3>
+              </div>
               
-              <h3>Bachelor of Science in Computer Information Systems</h3>
+              <div class="degree">
+                <h3>Bachelor of Science in Computer Information Systems</h3>
+              </div>
            
-              MicroTrain Technologies – Chicago, IL
-                2015
-           
-              <h3>Agile Full Stack Web and Hybrid Mobile Application Development</h3>
+              <div class="school clearfix">
+                <h3 class="float-left">MicroTrain Technologies – Chicago, IL</h3>
+                <h3 class="float-right">2015</h3>
+              </div>
+              
+              <div class="degree">
+                <h3>Agile Full Stack Web and Hybrid Mobile Application Development</h3>
+              </div>
             </section>
+
+            <script>
+
+              var toggleMenu = document.getElementById('toggleMenu');
+              var nav = document.querySelector('nav');
+              toggleMenu.addEventListener(
+                'click',
+                function(){
+                  if(nav.style.display=='block'){
+                    nav.style.display='none';
+                  }else{
+                    nav.style.display='block';
+                  }
+                }
+              );
+            </script>
       </body>
     </main>
 </html>
